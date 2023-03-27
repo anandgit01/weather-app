@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather forecast for Mumbai</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather forecast for Mumbai</h1>
+
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Temperature (°C)</th>
+      </tr>
+      <% for (let i = 0; i < data.hourly.time.length; i++) { %>
+        <tr>
+          <td><%= data.hourly.time[i] %></td>
+          <td><%= data.hourly.temperature_2m[i] %> °C</td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
